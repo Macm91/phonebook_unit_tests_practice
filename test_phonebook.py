@@ -10,4 +10,12 @@ class PhoneBookTest(unittest.TestCase):
         number = phonebook.lookup("Bob")
         self.assertEqual("12345", number)
 
-        
+    def test_missing_name(self):
+        phonebook = Phonebook
+        with self.assertRaises(KeyError)
+            phonebook.lookup("missing")
+
+    @unittest.skip("WIP")
+    def test_empty_phonebook_is_consistent(self):
+        phonebook = Phonebook()
+        self.assertTrue(phonebook.is_consistent())
