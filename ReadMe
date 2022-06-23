@@ -1,0 +1,10 @@
+To execute the unit test in the terminal run:
+
+python3 -m unittest 
+
+
+
+if it fails you will see the name of the test that failed as well as where it fails 
+
+if it passes, it will say ok
+
