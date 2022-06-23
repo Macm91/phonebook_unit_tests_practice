@@ -22,6 +22,9 @@ class PhoneBookTest(unittest.TestCase):
         with self.assertRaises(KeyError):
             self.phonebook.lookup("missing")
 
+    def test_empty_phonebook_is_consistent(self):
+        self.assertTrue(self.phonebook.is_consistent())
+
     def test_empty_phonebook_is_consistent_with_different_entries(self):
         self.phonebook.add("Bob", "12345")
         self.phonebook.add("Anna", "012345")
